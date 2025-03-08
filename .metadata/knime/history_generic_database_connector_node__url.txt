@@ -1,0 +1,4 @@
+jdbc:postgresql://<localhost>:<5432>/postgres
+jdbc:postgresql://<host>:<port>/[database]
+jdbc:postgresql://<localhost>:<5432>/[postgres]
+jdbc:h2:[location=file?<file>][location=in-memory?mem:<database>][location=network?tcp://<host>:9092/<database>]

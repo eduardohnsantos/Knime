@@ -1,0 +1,9 @@
+C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Saída\Arquivo-final-vendas.xlsx
+C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Saída\Saida_banco_dados.xlsx
+C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Saída\Arquivo_final_API.xlsx
+C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Arquivos+de+Aula\olx.xlsx
+C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Arquivos+de+Aula\resultados.xlsx
+C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Arquivos+de+Aula\Marca.xlsx
+C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Arquivos+de+Aula\Produto.xlsx
+C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Arquivos+de+Aula\Cliente.xlsx
+C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Arquivos+de+Aula\Venda.xlsx

@@ -1,0 +1,133 @@
+!SESSION 2025-02-27 13:42:20.511 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.e4.ui.workbench 2 0 2025-02-27 13:45:29.546
+!MESSAGE Removing PartDescriptorImpl with the "org.eclipse.help.ui.HelpView" id and the "Help" label.It points to the non available "bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" class. Bundle might have been uninstalled
+!SESSION 2025-02-27 16:35:33.820 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.ui 4 0 2025-02-27 23:07:16.538
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "com.knime.workbench.hubview.Browser.isBackEnabled()" because "this.m_browser" is null
+	at com.knime.workbench.hubview.HubView.finishLoading(HubView.java:488)
+	at com.knime.workbench.hubview.HubView$LoadingIconAnimator.lambda$0(HubView.java:566)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4029)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:643)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:550)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:171)
+	at org.knime.product.rcp.KNIMEApplication.start(KNIMEApplication.java:204)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+!SESSION 2025-02-28 23:35:53.250 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.knime.product 1 0 2025-02-28 23:57:13.144
+!MESSAGE ShellExec command: C:\Users\Eduardo\AppData\Local\Programs\KNIME\plugins\org.knime.pythonscripting.channel.v1.bin.win32.x86_64_5.2.1.v202408151034/bin/create_env.bat "C:\Users\Eduardo\AppData\Local\Programs\KNIME\plugins\org.knime.pythonscripting.channel.v1.bin.win32.x86_64_5.2.1.v202408151034\pkgs"
+
+!ENTRY org.knime.product 1 0 2025-02-28 23:57:13.145
+!MESSAGE ShellExec directory : C:\Users\Eduardo\AppData\Local\Programs\KNIME\plugins\org.knime.pythonscripting.channel.v1.bin.win32.x86_64_5.2.1.v202408151034/bin
+
+!ENTRY org.knime.product 1 0 2025-03-01 00:00:49.823
+!MESSAGE Standard output: Found KNIME_PYTHON_PACKAGE_REPO_URL=C:\Users\Eduardo\AppData\Local\Programs\KNIME\plugins\org.knime.pythonscripting.channel.v1.bin.win32.x86_64_5.2.1.v202408151034\pkgs, using packages from there for installation
+The extension is org_knime_pythonscripting
+The bundling home is set to: C:\Users\Eduardo\AppData\Local\Programs\KNIME\bundling\envs
+The bundling_parent contains a backslash.
+The bundle path is set to: C:\Users\Eduardo\AppData\Local\Programs\KNIME\bundling\envs\org_knime_pythonscripting
+
+!SESSION 2025-03-01 00:01:45.744 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.5
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data file:/C:/Users/Eduardo/knime-workspace/
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-03-01 00:10:05.879
+!MESSAGE An internal error occurred during: "File Transport Reader".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.osgi.framework.BundleContext.createFilter(String)" because "context" is null
+	at org.osgi.util.tracker.ServiceTracker.<init>(ServiceTracker.java:187)
+	at org.osgi.util.tracker.ServiceTracker.<init>(ServiceTracker.java:250)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient5.Activator.getLogService(Activator.java:202)
+	at org.eclipse.ecf.internal.provider.filetransfer.httpclient5.Activator.log(Activator.java:213)
+	at org.eclipse.ecf.provider.filetransfer.httpclient5.HttpClientRetrieveFileTransfer.hardClose(HttpClientRetrieveFileTransfer.java:200)
+	at org.eclipse.ecf.provider.filetransfer.retrieve.AbstractRetrieveFileTransfer$1.performFileTransfer(AbstractRetrieveFileTransfer.java:199)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-03-01 00:10:05.887
+!MESSAGE An internal error occurred during: "Install download1".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.equinox.internal.p2.repository.Transport.download(java.net.URI, java.io.OutputStream, org.eclipse.core.runtime.IProgressMonitor)" because the return value of "org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getTransport()" is null
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:757)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.downloadArtifact(SimpleArtifactRepository.java:679)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:816)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.getArtifact(MirrorRequest.java:329)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transferSingle(MirrorRequest.java:299)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:232)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:162)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:798)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-03-01 00:10:05.896
+!MESSAGE An internal error occurred during: "Install download0".
+!STACK 0
+java.lang.IllegalStateException: Attempt to access stopped agent: org.eclipse.equinox.internal.p2.core.ProvisioningAgent@3812180d
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.checkRunning(ProvisioningAgent.java:86)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:50)
+	at org.eclipse.equinox.p2.core.IProvisioningAgent.getService(IProvisioningAgent.java:86)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:239)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:162)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:798)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2025-03-01 00:10:06.370
+!MESSAGE An internal error occurred during: "Install download2".
+!STACK 0
+java.lang.IllegalStateException: Attempt to access stopped agent: org.eclipse.equinox.internal.p2.core.ProvisioningAgent@3812180d
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.checkRunning(ProvisioningAgent.java:86)
+	at org.eclipse.equinox.internal.p2.core.ProvisioningAgent.getService(ProvisioningAgent.java:50)
+	at org.eclipse.equinox.p2.core.IProvisioningAgent.getService(IProvisioningAgent.java:86)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.transfer(MirrorRequest.java:239)
+	at org.eclipse.equinox.internal.p2.artifact.repository.MirrorRequest.perform(MirrorRequest.java:162)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.SimpleArtifactRepository.getArtifact(SimpleArtifactRepository.java:798)
+	at org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob.run(DownloadJob.java:64)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-03-01 00:10:06.446
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.equinox.internal.p2.artifact.repository.simple.DownloadJob
+
+!ENTRY org.eclipse.core.jobs 2 2 2025-03-01 00:10:06.448
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.equinox.p2.operations.ProfileModificationJob

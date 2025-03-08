@@ -1,0 +1,310 @@
+2025-02-27 10:00:59,733 : ERROR : ForkJoinPool.commonPool-worker-2 :  : WelcomeAPEndpoint :  :  : Calling welcome page endpoint failed:Connect timed out
+java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(Unknown Source)
+	at org.knime.product.rcp.intro.WelcomeAPEndpoint.performRequest(WelcomeAPEndpoint.java:179)
+	at org.knime.product.rcp.intro.WelcomeAPEndpoint.requestCategories(WelcomeAPEndpoint.java:147)
+	at org.knime.product.rcp.intro.WelcomeAPEndpoint.lambda$0(WelcomeAPEndpoint.java:119)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.exec(Unknown Source)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(Unknown Source)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(Unknown Source)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(Unknown Source)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(Unknown Source)
+2025-02-27 10:01:05,631 : ERROR : KNIME-Worker-0 :  : DesktopAPUtil :  :  : Could not check for updates
+java.io.IOException: Connect timed out, while checking updates for site at "https://update.knime.com/community-contributions/trusted/5.4".
+	at org.knime.core.eclipseUtil.UpdateChecker.checkForNewRelease(UpdateChecker.java:200)
+	at org.knime.product.rcp.intro.UpdateDetector.checkForNewRelease(UpdateDetector.java:97)
+	at org.knime.ui.java.util.DesktopAPUtil.checkForUpdate(DesktopAPUtil.java:253)
+	at org.knime.gateway.impl.webui.UpdateStateProvider.lambda$0(UpdateStateProvider.java:86)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+Caused by: java.net.SocketTimeoutException: Connect timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source)
+	at java.base/java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.base/java.net.Socket.connect(Unknown Source)
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(Unknown Source)
+	at java.base/sun.net.NetworkClient.doConnect(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.<init>(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsClient.New(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(Unknown Source)
+	at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.connect(Unknown Source)
+	at org.knime.core.eclipseUtil.UpdateChecker.checkForNewRelease(UpdateChecker.java:182)
+	... 7 more
+2025-02-27 10:01:07,063 : WARN  : comm-pool-thread-1 :  : JsonRpcErrorResolver :  :  : An unexpected json rpc error occurred
+java.lang.NullPointerException: Cannot invoke "java.net.URL.getProtocol()" because "url" is null
+	at org.knime.core.util.proxy.URLConnectionFactory.resolveJavaNetProxy(URLConnectionFactory.java:228)
+	at org.knime.core.util.proxy.URLConnectionFactory.getConnection(URLConnectionFactory.java:193)
+	at org.knime.ai.assistant.java.UiStringsUtils.getUiStrings(UiStringsUtils.java:84)
+	at org.knime.ai.assistant.java.ChatBackend.getUiStrings(ChatBackend.java:216)
+	at java.base/java.util.Optional.map(Unknown Source)
+	at org.knime.gateway.impl.webui.service.DefaultKaiService.getUiStrings(DefaultKaiService.java:91)
+	at org.knime.gateway.impl.webui.jsonrpc.service.JsonRpcKaiServiceWrapper.getUiStrings(JsonRpcKaiServiceWrapper.java:91)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.invoke(JsonRpcBasicServer.java:478)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleObject(JsonRpcBasicServer.java:349)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleJsonNodeRequest(JsonRpcBasicServer.java:274)
+	at com.googlecode.jsonrpc4j.JsonRpcBasicServer.handleRequest(JsonRpcBasicServer.java:242)
+	at org.knime.gateway.impl.jsonrpc.JsonRpcRequestHandler.handle(JsonRpcRequestHandler.java:104)
+	at org.knime.ui.java.browser.lifecycle.Init.lambda$13(Init.java:290)
+	at com.equo.comm.common.MessageHandler.processReceivedEventMessage(MessageHandler.java:131)
+	at com.equo.comm.ee.provider.service.ChromiumService.receiveMessage(ChromiumService.java:98)
+	at com.equo.comm.ee.provider.CommunicationManagerChromiumImpl.receiveMessage(CommunicationManagerChromiumImpl.java:48)
+	at com.equo.chromium.swt.internal.spi.CommRouterHandler.handleRequest(CommRouterHandler.java:33)
+	at com.equo.chromium.swt.internal.spi.CommRouterHandler.lambda$1(CommRouterHandler.java:51)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-02-27 10:01:07,072 : ERROR : main :  : KnimeBrowserView :  :  : %cerror%c RPC Client:: Error RPC request 
+      background: #c0392b;
+      border-radius: 0.5em;
+      color: white;
+      font-weight: bold;
+      padding: 2px 0.5em;
+      Error: Cannot invoke "java.net.URL.getProtocol()" because "url" is null (source: http://org.knime.ui.java/assets/index-CPG1Nwkw.js; line: 87)
+2025-02-27 12:58:21,380 : WARN  : Thread-842 :  : OAuthAuthenticator :  :  : Could not stop OAuth redirect listener: null
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(Unknown Source)
+	at java.base/java.util.concurrent.CountDownLatch.await(Unknown Source)
+	at org.eclipse.jetty.io.ManagedSelector.doStop(ManagedSelector.java:137)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:182)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:205)
+	at org.eclipse.jetty.io.SelectorManager.doStop(SelectorManager.java:280)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:182)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:205)
+	at org.eclipse.jetty.server.AbstractConnector.doStop(AbstractConnector.java:375)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStop(AbstractNetworkConnector.java:82)
+	at org.eclipse.jetty.server.ServerConnector.doStop(ServerConnector.java:241)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at org.eclipse.jetty.server.Server.doStop(Server.java:658)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:132)
+	at com.knime.explorer.server.rest.OAuthAuthenticator.stopServer(OAuthAuthenticator.java:733)
+	at com.knime.explorer.server.rest.OAuthAuthenticator.login(OAuthAuthenticator.java:599)
+	at com.knime.explorer.server.rest.OAuthLoginDialog.lambda$0(OAuthLoginDialog.java:179)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-02-27 12:58:56,237 : WARN  : comm-pool-thread-1 :  : Node : CSV Reader : 3:1 : Please specify a file
+2025-02-27 13:01:13,467 : WARN  : comm-pool-thread-1 :  : Node : Row Filter : 3:2 : At least one filter criterion is needed.
+2025-02-27 13:02:04,496 : WARN  : comm-pool-thread-1 :  : Node : Row Filter : 3:2 : At least one filter criterion is needed.
+2025-02-27 13:03:54,354 : WARN  : comm-pool-thread-1 :  : Node : Row Filter : 3:3 : At least one filter criterion is needed.
+2025-02-27 13:05:53,361 : WARN  : KNIME-Worker-2-Row Filter 3:3 :  : Node : Row Filter : 3:3 : Node created an empty data table.
+2025-02-27 13:06:40,234 : WARN  : comm-pool-thread-5 :  : Node : Row Filter : 3:4 : At least one filter criterion is needed.
+2025-02-27 13:45:29,548 : WARN  : main :  : LongStartupHandler :  :  : Startup took 92701 seconds.
+2025-02-27 13:48:28,398 : WARN  : comm-pool-thread-1 :  : Node : CSV Reader : 3:1 : Please specify a file
+2025-02-27 13:49:57,317 : WARN  : comm-pool-thread-1 :  : Node : Row Filter : 3:2 : No row filter specified
+2025-02-27 13:52:47,989 : WARN  : comm-pool-thread-2 :  : Node : Row Filter : 3:3 : No row filter specified
+2025-02-27 13:53:36,224 : WARN  : comm-pool-thread-3 :  : Node : Row Filter : 3:4 : No row filter specified
+2025-02-27 13:54:44,959 : WARN  : comm-pool-thread-2 :  : Node : CSV Writer : 3:5 : Please specify a file
+2025-02-27 21:57:08,787 : WARN  : comm-pool-thread-4 :  : Node : CSV Reader : 3:1 : Please specify a file
+2025-02-27 21:58:59,459 : WARN  : comm-pool-thread-4 :  : Node : Row Filter : 3:3 : No row filter specified
+2025-02-27 22:00:23,978 : WARN  : comm-pool-thread-4 :  : Node : Row Filter : 3:5 : No row filter specified
+2025-02-27 22:00:53,289 : WARN  : comm-pool-thread-4 :  : Node : Sorter : 3:6 : No selected columns to sort
+2025-02-27 22:01:19,549 : WARN  : comm-pool-thread-4 :  : Node : Rank : 3:7 : No ranking column is selected.
+2025-02-27 22:07:50,735 : WARN  : comm-pool-thread-6 :  : Node : Excel Reader : 3:1 : Please specify a file
+2025-02-27 22:08:22,636 : WARN  : main :  : Node : Excel Reader : 3:1 : The node configuration changed and the table spec will be recalculated during execution.
+2025-02-27 22:08:24,067 : WARN  : main :  : Node : Excel Reader : 3:1 : The node configuration changed and the table spec will be recalculated during execution.
+2025-02-27 22:08:51,004 : WARN  : comm-pool-thread-7 :  : Node : Excel Reader : 3:2 : Please specify a file
+2025-02-27 22:09:16,268 : WARN  : main :  : Node : Excel Reader : 3:2 : The node configuration changed and the table spec will be recalculated during execution.
+2025-02-27 22:09:16,895 : WARN  : main :  : Node : Excel Reader : 3:2 : The node configuration changed and the table spec will be recalculated during execution.
+2025-02-27 22:09:58,732 : WARN  : comm-pool-thread-7 :  : Node : Joiner : 3:3 : No join columns passed.
+2025-02-27 22:11:56,674 : WARN  : comm-pool-thread-8 :  : Node : Excel Reader : 3:4 : Please specify a file
+2025-02-27 22:12:18,622 : WARN  : main :  : Node : Excel Reader : 3:4 : The node configuration changed and the table spec will be recalculated during execution.
+2025-02-27 22:12:19,685 : WARN  : main :  : Node : Excel Reader : 3:4 : The node configuration changed and the table spec will be recalculated during execution.
+2025-02-27 22:12:55,719 : WARN  : comm-pool-thread-8 :  : Node : Joiner : 3:5 : No join columns passed.
+2025-02-27 22:13:36,815 : WARN  : comm-pool-thread-8 :  : Node : Excel Reader : 3:6 : Please specify a file
+2025-02-27 22:13:54,250 : WARN  : main :  : Node : Excel Reader : 3:6 : The node configuration changed and the table spec will be recalculated during execution.
+2025-02-27 22:13:54,707 : WARN  : main :  : Node : Excel Reader : 3:6 : The node configuration changed and the table spec will be recalculated during execution.
+2025-02-27 22:14:11,889 : WARN  : comm-pool-thread-8 :  : Node : Joiner : 3:7 : No join columns passed.
+2025-02-27 22:16:46,659 : WARN  : comm-pool-thread-9 :  : Node : Excel Writer : 3:9 : Please specify a file
+2025-02-27 22:22:57,968 : WARN  : comm-pool-thread-11 :  : Node : CSV Reader : 3:1 : Please specify a file
+2025-02-27 22:37:43,421 : WARN  : comm-pool-thread-14 :  : Node : String Manipulation : 3:3 : No expression has been set.
+2025-02-27 22:40:11,459 : WARN  : comm-pool-thread-15 :  : Node : String Manipulation : 3:4 : No expression has been set.
+2025-02-27 22:41:39,770 : WARN  : main :  : WrappedNodeDialog : String Manipulation : 3:4 : failed to apply settings: Unable to compile expression
+ERROR at line 69
+The method join(java.lang.String...) in the type org.knime.base.node.preproc.stringmanipulation.manipulator.JoinManipulator is not applicable for the arguments (java.lang.String, char, java.lang.String, char, java.lang.String, char, java.lang.String)
+  Line : 68    public java.lang.String internalEvaluate() throws Abort {
+  Line : 69  return join(__col2, '-', __col5, '-', __col9, '-', __col19);
+org.knime.core.node.InvalidSettingsException: Unable to compile expression
+ERROR at line 69
+The method join(java.lang.String...) in the type org.knime.base.node.preproc.stringmanipulation.manipulator.JoinManipulator is not applicable for the arguments (java.lang.String, char, java.lang.String, char, java.lang.String, char, java.lang.String)
+  Line : 68    public java.lang.String internalEvaluate() throws Abort {
+  Line : 69  return join(__col2, '-', __col5, '-', __col9, '-', __col19);
+	at org.knime.base.node.preproc.stringmanipulation.StringManipulationNodeDialog.saveSettingsTo(StringManipulationNodeDialog.java:419)
+	at org.knime.core.node.NodeDialogPane.internalSaveSettingsTo(NodeDialogPane.java:539)
+	at org.knime.core.node.NodeDialogPane$4.run(NodeDialogPane.java:778)
+	at org.knime.core.node.util.ViewUtils$3.run(ViewUtils.java:353)
+	at org.knime.core.node.util.ViewUtils$2.run(ViewUtils.java:155)
+	at java.desktop/java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+Caused by: org.knime.ext.sun.nodes.script.compile.CompilationFailedException: Unable to compile expression
+ERROR at line 69
+The method join(java.lang.String...) in the type org.knime.base.node.preproc.stringmanipulation.manipulator.JoinManipulator is not applicable for the arguments (java.lang.String, char, java.lang.String, char, java.lang.String, char, java.lang.String)
+  Line : 68    public java.lang.String internalEvaluate() throws Abort {
+  Line : 69  return join(__col2, '-', __col5, '-', __col9, '-', __col19);
+	at org.knime.ext.sun.nodes.script.compile.JavaCodeCompiler.compile(JavaCodeCompiler.java:333)
+	at org.knime.ext.sun.nodes.script.expression.Expression.<init>(Expression.java:217)
+	at org.knime.ext.sun.nodes.script.expression.Expression.compile(Expression.java:619)
+	at org.knime.base.node.preproc.stringmanipulation.StringManipulationNodeDialog.saveSettingsTo(StringManipulationNodeDialog.java:417)
+	... 17 more
+2025-02-27 22:45:12,457 : WARN  : comm-pool-thread-17 :  : Node : String Manipulation : 3:5 : No expression has been set.
+2025-02-27 23:02:45,661 : WARN  : main :  : Node : Excel Reader : 3:1 : Please specify a file
+2025-02-27 23:08:06,389 : WARN  : KNIME-Worker-15-Webpage Retriever 3:2 :  : RestNodeModel : Webpage Retriever : 3:2 : The KNIME-wide proxy settings are activated but none were specified. Defaulting to using no proxy.
+2025-02-28 23:46:18,378 : WARN  : KNIME-Worker-3-GET Request 3:2 :  : RestNodeModel : GET Request : 3:2 : The KNIME-wide proxy settings are activated but none were specified. Defaulting to using no proxy.
+2025-02-28 23:46:57,482 : WARN  : main :  : Node : JSON Path : 3:3 : No JSON path was specified, please enter at least one expression!
+2025-02-28 23:49:44,844 : WARN  : main :  : Node : Excel Writer : 3:5 : Please specify a file
+2025-03-01 00:01:45,489 : ERROR : Clear OSGi configuration :  : InvokeInstallSiteAction :  :  : Could not clean OSGi configuration area: C:\Users\Eduardo\AppData\Local\Programs\KNIME\configuration\org.eclipse.osgi\131\0\.cp\os\win32\x86_64\localfile_1_0_0.dll
+2025-03-01 00:10:06,595 : ERROR : Clear OSGi configuration :  : InvokeUpdateAction :  :  : Could not clean OSGi configuration area: C:\Users\Eduardo\AppData\Local\Programs\KNIME\configuration\org.eclipse.osgi\293\0\.cp\os\win32\x86_64\localfile_1_0_0.dll
+2025-03-03 13:21:42,963 : WARN  : comm-pool-thread-2 :  : Node : DB Connector : 3:1 : Please select a database type.
+2025-03-03 13:23:27,410 : ERROR : KNIME-Worker-2-DB Connector 3:1 :  : Node : DB Connector : 3:1 : Execute failed: Selected JDBC driver does not support given JDBC url.
+java.sql.SQLException: Selected JDBC driver does not support given JDBC url.
+	at org.knime.database.connection.UrlDBConnectionController.createConnection(UrlDBConnectionController.java:346)
+	at org.knime.database.connection.AbstractConnectionProvider.createConnection(AbstractConnectionProvider.java:103)
+	at org.knime.database.connection.impl.DBConnectionManager.lambda$4(DBConnectionManager.java:594)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-03-03 13:23:39,837 : ERROR : KNIME-Worker-3-DB Connector 3:1 :  : Node : DB Connector : 3:1 : Execute failed: Selected JDBC driver does not support given JDBC url.
+java.sql.SQLException: Selected JDBC driver does not support given JDBC url.
+	at org.knime.database.connection.UrlDBConnectionController.createConnection(UrlDBConnectionController.java:346)
+	at org.knime.database.connection.AbstractConnectionProvider.createConnection(AbstractConnectionProvider.java:103)
+	at org.knime.database.connection.impl.DBConnectionManager.lambda$4(DBConnectionManager.java:594)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-03-03 13:25:15,109 : ERROR : KNIME-Worker-4-DB Connector 3:1 :  : Node : DB Connector : 3:1 : Execute failed: Selected JDBC driver does not support given JDBC url.
+java.sql.SQLException: Selected JDBC driver does not support given JDBC url.
+	at org.knime.database.connection.UrlDBConnectionController.createConnection(UrlDBConnectionController.java:346)
+	at org.knime.database.connection.AbstractConnectionProvider.createConnection(AbstractConnectionProvider.java:103)
+	at org.knime.database.connection.impl.DBConnectionManager.lambda$4(DBConnectionManager.java:594)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-03-03 13:25:24,811 : ERROR : KNIME-Worker-5-DB Connector 3:1 :  : Node : DB Connector : 3:1 : Execute failed: Selected JDBC driver does not support given JDBC url.
+java.sql.SQLException: Selected JDBC driver does not support given JDBC url.
+	at org.knime.database.connection.UrlDBConnectionController.createConnection(UrlDBConnectionController.java:346)
+	at org.knime.database.connection.AbstractConnectionProvider.createConnection(AbstractConnectionProvider.java:103)
+	at org.knime.database.connection.impl.DBConnectionManager.lambda$4(DBConnectionManager.java:594)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-03-03 13:26:02,175 : ERROR : KNIME-Worker-4-DB Connector 3:1 :  : Node : DB Connector : 3:1 : Execute failed: Selected JDBC driver does not support given JDBC url.
+java.sql.SQLException: Selected JDBC driver does not support given JDBC url.
+	at org.knime.database.connection.UrlDBConnectionController.createConnection(UrlDBConnectionController.java:346)
+	at org.knime.database.connection.AbstractConnectionProvider.createConnection(AbstractConnectionProvider.java:103)
+	at org.knime.database.connection.impl.DBConnectionManager.lambda$4(DBConnectionManager.java:594)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-03-03 13:26:37,224 : ERROR : KNIME-Worker-5-DB Connector 3:1 :  : Node : DB Connector : 3:1 : Execute failed: Selected JDBC driver does not support given JDBC url.
+java.sql.SQLException: Selected JDBC driver does not support given JDBC url.
+	at org.knime.database.connection.UrlDBConnectionController.createConnection(UrlDBConnectionController.java:346)
+	at org.knime.database.connection.AbstractConnectionProvider.createConnection(AbstractConnectionProvider.java:103)
+	at org.knime.database.connection.impl.DBConnectionManager.lambda$4(DBConnectionManager.java:594)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-03-03 13:28:34,782 : ERROR : KNIME-Worker-6-DB Connector 3:1 :  : Node : DB Connector : 3:1 : Execute failed: Selected JDBC driver does not support given JDBC url.
+java.sql.SQLException: Selected JDBC driver does not support given JDBC url.
+	at org.knime.database.connection.UrlDBConnectionController.createConnection(UrlDBConnectionController.java:346)
+	at org.knime.database.connection.AbstractConnectionProvider.createConnection(AbstractConnectionProvider.java:103)
+	at org.knime.database.connection.impl.DBConnectionManager.lambda$4(DBConnectionManager.java:594)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2025-03-03 13:29:40,617 : WARN  : comm-pool-thread-5 :  : Node : DB Query Reader : 3:2 : Please enter a SQL statement
+2025-03-03 13:29:45,456 : WARN  : SwingWorker-pool-8-thread-4 :  : ManagedConnection : DB Query Reader : 3:2 : 4 statements have not been closed before the closure of the managed connection.
+2025-03-03 13:30:28,524 : WARN  : comm-pool-thread-5 :  : Node : DB Query Reader : 3:3 : Please enter a SQL statement
+2025-03-03 13:46:12,842 : WARN  : main :  : Node : Excel Reader : 3:1 : The node configuration changed and the table spec will be recalculated during execution.
+2025-03-03 13:46:12,847 : WARN  : main :  : Node : Excel Reader : 3:2 : The node configuration changed and the table spec will be recalculated during execution.
+2025-03-03 13:46:12,848 : WARN  : main :  : Node : Excel Reader : 3:4 : The node configuration changed and the table spec will be recalculated during execution.
+2025-03-03 13:46:12,849 : WARN  : main :  : Node : Excel Reader : 3:6 : The node configuration changed and the table spec will be recalculated during execution.
+2025-03-03 13:46:15,771 : ERROR : KNIME-Worker-1-Excel Writer 3:9 :  : Node : Excel Writer : 3:9 : Execute failed: Output file 'C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Saída\Arquivo-final-vendas.xlsx' exists and must not be overwritten due to user settings.
+java.io.IOException: Output file 'C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Saída\Arquivo-final-vendas.xlsx' exists and must not be overwritten due to user settings.
+	at org.knime.ext.poi3.node.io.filehandling.excel.writer.ExcelTableWriterNodeModel.getWorkbookHandler(ExcelTableWriterNodeModel.java:266)
+	at org.knime.ext.poi3.node.io.filehandling.excel.writer.ExcelTableWriterNodeModel.write(ExcelTableWriterNodeModel.java:191)
+	at org.knime.ext.poi3.node.io.filehandling.excel.writer.ExcelTableWriterNodeModel.execute(ExcelTableWriterNodeModel.java:159)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-03-03 13:47:07,242 : WARN  : main :  : Node : Excel Writer : 3:9 : Execute failed: Output file 'C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Saída\Arquivo-final-vendas.xlsx' exists and must not be overwritten due to user settings.
+2025-03-03 13:47:07,252 : WARN  : main :  : Node : Excel Reader : 3:1 : The node configuration changed and the table spec will be recalculated during execution.
+2025-03-03 13:47:07,254 : WARN  : main :  : Node : Excel Reader : 3:2 : The node configuration changed and the table spec will be recalculated during execution.
+2025-03-03 13:47:07,255 : WARN  : main :  : Node : Excel Reader : 3:4 : The node configuration changed and the table spec will be recalculated during execution.
+2025-03-03 13:47:07,256 : WARN  : main :  : Node : Excel Reader : 3:6 : The node configuration changed and the table spec will be recalculated during execution.
+2025-03-03 13:47:09,800 : ERROR : KNIME-Worker-1-Excel Writer 3:9 :  : Node : Excel Writer : 3:9 : Execute failed: Output file 'C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Saída\Arquivo-final-vendas.xlsx' exists and must not be overwritten due to user settings.
+java.io.IOException: Output file 'C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Saída\Arquivo-final-vendas.xlsx' exists and must not be overwritten due to user settings.
+	at org.knime.ext.poi3.node.io.filehandling.excel.writer.ExcelTableWriterNodeModel.getWorkbookHandler(ExcelTableWriterNodeModel.java:266)
+	at org.knime.ext.poi3.node.io.filehandling.excel.writer.ExcelTableWriterNodeModel.write(ExcelTableWriterNodeModel.java:191)
+	at org.knime.ext.poi3.node.io.filehandling.excel.writer.ExcelTableWriterNodeModel.execute(ExcelTableWriterNodeModel.java:159)
+	at org.knime.core.node.NodeModel.executeModel(NodeModel.java:588)
+	at org.knime.core.node.Node.invokeFullyNodeModelExecute(Node.java:1297)
+	at org.knime.core.node.Node.execute(Node.java:1059)
+	at org.knime.core.node.workflow.NativeNodeContainer.performExecuteNode(NativeNodeContainer.java:595)
+	at org.knime.core.node.exec.LocalNodeExecutionJob.mainExecute(LocalNodeExecutionJob.java:98)
+	at org.knime.core.node.workflow.NodeExecutionJob.internalRun(NodeExecutionJob.java:201)
+	at org.knime.core.node.workflow.NodeExecutionJob.run(NodeExecutionJob.java:117)
+	at org.knime.core.util.ThreadUtils$RunnableWithContextImpl.runWithContext(ThreadUtils.java:367)
+	at org.knime.core.util.ThreadUtils$RunnableWithContext.run(ThreadUtils.java:221)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.knime.core.util.ThreadPool$MyFuture.run(ThreadPool.java:123)
+	at org.knime.core.util.ThreadPool$Worker.run(ThreadPool.java:246)
+2025-03-03 13:48:34,141 : WARN  : ModalContext :  : Node : Excel Writer : 3:9 : Execute failed: Output file 'C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Saída\Arquivo-final-vendas.xlsx' exists and must not be overwritten due to user settings.
+2025-03-03 13:49:20,623 : WARN  : main :  : Node : Excel Reader : 3:1 : The node configuration changed and the table spec will be recalculated during execution.
+2025-03-03 13:49:20,627 : WARN  : main :  : Node : Excel Reader : 3:2 : The node configuration changed and the table spec will be recalculated during execution.
+2025-03-03 13:49:20,628 : WARN  : main :  : Node : Excel Reader : 3:4 : The node configuration changed and the table spec will be recalculated during execution.
+2025-03-03 13:49:20,629 : WARN  : main :  : Node : Excel Reader : 3:6 : The node configuration changed and the table spec will be recalculated during execution.

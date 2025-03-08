@@ -1,0 +1,3 @@
+C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Arquivos+de+Aula\CLEAN_FIFA17_official_data.csv
+C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Arquivos+de+Aula\vinhos_mundo.csv
+C:\Users\Eduardo\Desktop\Super_Academia_Engenharia_de_Dados\Knime\Saída\Arquivo_vinhos_tratamento.csv

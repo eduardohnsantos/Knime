@@ -1,0 +1,12 @@
+{
+  "version" : "5.2.0.v202311301336",
+  "projects" : [ {
+    "name" : "KNIME_join_venda",
+    "active" : true,
+    "origin" : {
+      "providerId" : "local",
+      "spaceId" : "local",
+      "relativePath" : "KNIME_join_venda"
+    }
+  } ]
+}
